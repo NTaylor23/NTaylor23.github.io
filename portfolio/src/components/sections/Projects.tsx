@@ -29,7 +29,7 @@ export const Projects: React.FC = () => {
       title: "ntaylor.dev",
       description:
         "Designed a responsive portfolio page to showcase my experience and skills.",
-      techStack: ["JavaScript", "React", "Django"],
+      techStack: ["TypeScript", "React", "TailwindCSS"],
       url: 'https://ntaylor.dev',
     },
     {
