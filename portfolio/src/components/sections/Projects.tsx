@@ -13,12 +13,15 @@ export const Projects: React.FC = () => {
 
   const cards = [
     {
+      // TODO: Update the URL with the Camosun capstone site once it exists
       imgSrc: cuboh,
       alt: "Cuboh",
       title: "cuboh",
       description:
         "Led a team of fellow students in developing a versatile full-stack web application for a modern, fast-paced startup.",
       techStack: ["JavaScript", "React", "Django"],
+      url: 'https://www.camosun.ca',
+      
     },
     {
       imgSrc: website,
@@ -27,6 +30,7 @@ export const Projects: React.FC = () => {
       description:
         "Designed a responsive portfolio page to showcase my experience and skills.",
       techStack: ["JavaScript", "React", "Django"],
+      url: 'https://ntaylor.dev',
     },
     {
       imgSrc: seamtree,
@@ -35,6 +39,7 @@ export const Projects: React.FC = () => {
       description:
         "Full-stack interactive content aware image resizing application.",
       techStack: ["Python", "NumPy", "Flask", "JavaScript"],
+      url: 'https://github.com/NTaylor23/SeamCarve',
     },
     {
       imgSrc: sudoku,
@@ -43,6 +48,7 @@ export const Projects: React.FC = () => {
       description:
         "Solve any Sudoku puzzle through your webcam using computer vision.",
       techStack: ["OpenCV", "ML"],
+      url: 'https://github.com/NTaylor23/Sudoku',
     },
   ];
   return (

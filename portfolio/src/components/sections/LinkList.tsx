@@ -1,6 +1,6 @@
 import "../../styles/index.css";
 
-const liStyle: string = "hover:text-slate-50 mt-4 hover:animate-pulse";
+const liStyle: string = "cursor-pointer hover:text-slate-50 mt-4 hover:animate-pulse";
 
 interface LinkListProps {
   handleMenuClick: Function;

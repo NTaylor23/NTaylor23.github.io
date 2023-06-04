@@ -10,6 +10,7 @@ interface ProjectPreviewProps {
   isGreyed: boolean;
   handleHover: () => void;
   handleMouseLeave: () => void;
+  url: string;
 }
 
 export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
@@ -22,6 +23,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   isGreyed,
   handleHover,
   handleMouseLeave,
+  url,
 }) => {
   return (
     <div
@@ -31,6 +33,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}
     >
+      <a href={url} target="_blank" rel="noopener noreferrer">
       <div className="flex max-w-sm items-center rounded-lg">
         <div className="relative flex-none">
           <img
@@ -55,6 +58,7 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           </div>
         ))}
       </div>
+      </a>
     </div>
   );
 };

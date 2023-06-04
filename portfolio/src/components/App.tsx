@@ -5,7 +5,7 @@ import { SplashText } from "./sections/SplashText";
 import { Experience } from "./sections/Experience";
 import { Masthead } from "./sections/Masthead";
 
-import LinkList from "./modular/LinkList";
+import LinkList from "./sections/LinkList";
 import Socials from "./sections/Socials";
 import Projects from "./sections/Projects";
 

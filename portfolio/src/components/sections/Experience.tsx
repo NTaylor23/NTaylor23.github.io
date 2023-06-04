@@ -10,22 +10,13 @@ export const Experience: React.FC = () => {
 
   const cards = [
     {
-      dateRange: "August 2023 - Present",
-      title: "Software Developer",
+      dateRange: "May 2023 - Present",
+      title: "Software Developer Intern",
       orgName: "Quester Tangent",
       url: "https://www.questertangent.com/",
       description:
         "Create, test, and optimize safety-critical software for a proprietary real-time operating system utilized globally in the rail transit industry.",
       techStack: ["C", "Python", "RTOS", "Compiler Design"],
-    },
-    {
-      dateRange: "May 2023 - August 2023",
-      title: "Software Developer Intern",
-      orgName: "Cuboh",
-      url: "https://www.cuboh.com/",
-      description:
-        "Led a team of fellow students in developing a versatile full-stack web application for a modern, fast-paced startup. Implemented intuitive, functional designs with React and designed secure validation endpoints in Django. Provided leadership through close collaboration, knowledge sharing and mentorship.",
-      techStack: ["JavaScript", "React", "RESTful APIs"],
     },
     {
       dateRange: "May 2022 - August 2022",
