@@ -9,6 +9,10 @@ interface TimeSpanProps {
   url: string;
   description: string;
   techStack: string[];
+  isHovered: boolean;
+  isGreyed: boolean;
+  handleHover: () => void;
+  handleMouseLeave: () => void;
 }
 
 export const TimeSpan: React.FC<TimeSpanProps> = ({
@@ -18,15 +22,24 @@ export const TimeSpan: React.FC<TimeSpanProps> = ({
   url,
   description,
   techStack,
+  isHovered,
+  isGreyed,
+  handleHover,
+  handleMouseLeave,
 }) => {
   return (
     <>
-      <div className="rounded mb-4 lg:hover:bg-[#FFFFFF1A] hover:animate-fade">
-
+      <div
+        className={`mb-4 rounded transition-opacity duration-200 ease-in-out ${
+          isGreyed ? "opacity-50" : "opacity-100"
+        }`}
+        onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave}
+      >
         <DateRange text={dateRange} />
         <JobTitle text={orgName} title={title} url={url} />
         <JobParagraph>{description}</JobParagraph>
-        <div className="mx-8 lg:mx-0 flex flex-wrap">
+        <div className="mx-8 flex flex-wrap md:mx-0">
           {techStack.map((t, k) => (
             <div key={k} className="mb-2 mr-2">
               <TechIcon text={t} />

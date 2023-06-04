@@ -77,7 +77,7 @@ const SubHeading: React.FC<BaseHeaderProps> = ({ text }) => {
   return (
     <BaseHeader
       text={text}
-      className="text-lg tracking-wide text-slate-150"
+      className="text-slate-150 text-lg tracking-wide"
       Element="h3"
     />
   );

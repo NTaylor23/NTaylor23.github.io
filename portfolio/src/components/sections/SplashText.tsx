@@ -1,7 +1,7 @@
-import { DividerHeader } from "./Titles";
-import { Biography } from "./static_texts/Biography";
+import { DividerHeader } from "../modular/Titles";
+import { Biography } from "../texts/Biography";
 
-import ".././styles/App.css";
+import "../../styles/App.css";
 
 export const SplashText: React.FC = () => {
   return (
