@@ -9,7 +9,7 @@ const BaseParagraph: React.FC<
 > = ({ children, className }) => {
   return (
     <div className="">
-      <p className={`py-4 mx-8 md:mx-0 text-left text-slate-400 ${className}`}>{children}</p>
+      <p className={`py-4 mx-8 md:mx-0 text-left text-slate-300/75 ${className}`}>{children}</p>
     </div>
   );
 };

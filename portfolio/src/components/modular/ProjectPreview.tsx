@@ -33,13 +33,13 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}
     >
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <a href={url} rel="noopener noreferrer">
       <div className="flex max-w-sm items-center rounded-lg">
         <div className="relative flex-none">
           <img
             src={imgSrc}
             alt={alt}
-            className="inset-0 h-24 w-28 rounded-md"
+            className="inset-0 rounded-md"
           />
         </div>
         <div className="flex-auto px-6">

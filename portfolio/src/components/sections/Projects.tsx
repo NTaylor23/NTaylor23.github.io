@@ -30,7 +30,7 @@ export const Projects: React.FC = () => {
       description:
         "Designed a responsive portfolio page to showcase my experience and skills.",
       techStack: ["TypeScript", "React", "TailwindCSS"],
-      url: 'https://ntaylor.dev',
+      url: 'https://github.com/NTaylor23/NTaylor23.github.io/tree/main/portfolio',
     },
     {
       imgSrc: seamtree,
@@ -64,35 +64,6 @@ export const Projects: React.FC = () => {
           {...card}
         />
       ))}
-
-      {/* <ProjectPreview
-        imgSrc={cuboh}
-        alt={"Cuboh"}
-        title={"cuboh"}
-        description={"Led a team of fellow students in developing a versatile full-stack web application for a modern, fast-paced startup."}
-        techStack={['TypeScript', 'React', 'TailwindCSS']}
-      />
-      <ProjectPreview
-        imgSrc={website}
-        alt={"My Portfolio Site"}
-        title={"ntaylor.dev"}
-        description={"Designed a responsive portfolio page to showcase my experience and skills."}
-        techStack={['TypeScript', 'React', 'Tailwind']}
-      />
-      <ProjectPreview
-        imgSrc={seamtree}
-        alt={"Seam Carving Project"}
-        title={"seamcarve"}
-        description={"Full-stack interactive content aware image resizing application."}
-        techStack={['Python', 'NumPy', 'Flask', 'JavaScript']}
-      />
-      <ProjectPreview
-        imgSrc={sudoku}
-        alt={"Sudoku Solver Project"}
-        title={"sudoku"}
-        description={"Solve any Sudoku puzzle through your webcam using computer vision."}
-        techStack={['OpenCV', 'ML']}
-      /> */}
     </div>
   );
 };

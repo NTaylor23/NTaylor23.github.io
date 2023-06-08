@@ -9,9 +9,9 @@ import LinkList from "./sections/LinkList";
 import Socials from "./sections/Socials";
 import Projects from "./sections/Projects";
 
+import ".././styles/index.css";
 import ".././styles/App.css";
 
-//from-[#00032c] to-[#1e202e]
 const App: React.FC = () => {
   const myRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
@@ -63,7 +63,14 @@ const App: React.FC = () => {
           <a className={linkStyle} href="https://tailwindcss.com/">
             tailwindcss
           </a>
-          , hosted on GitHub, and crafted with love.
+          , hosted on{" "}
+          <a
+            className={linkStyle}
+            href="https://github.com/NTaylor23/NTaylor23.github.io"
+          >
+            Github
+          </a>
+          , and crafted with love.
         </FooterParagraph>
       </div>
     </div>

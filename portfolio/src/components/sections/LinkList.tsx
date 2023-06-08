@@ -20,11 +20,8 @@ export const LinkList: React.FC<LinkListProps> = ({ handleMenuClick }) => {
             Ψ - PROJECTS
         </li>
         <li className={liStyle}>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Σ - RÉSUMÉ</a>
+            <a href="/resume.pdf" rel="noopener noreferrer">Σ - RÉSUMÉ</a>
         </li>
-        {/* <li className={liStyle}>
-            ℵ - CONTACT
-        </li> */}
       </ul>
     </div>
   );

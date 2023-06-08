@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Inter';
-  src: local('Inter'), url('../fonts/Inter-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: local('Raleway'), url('../fonts/Raleway-Regular.ttf') format('ttf');
-  font-weight: 400;
-  font-style: normal;
-}
 
 /* Width */
 ::-webkit-scrollbar {
@@ -40,6 +27,7 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 
 body {
   font-family: 'Inter', sans-serif;
