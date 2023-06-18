@@ -1,4 +1,4 @@
-import { useRef, useCallback } from "react";
+import { useRef, useCallback, useState } from "react";
 
 import { FooterParagraph } from "./modular/Paragraphs";
 import { SplashText } from "./sections/SplashText";
@@ -13,6 +13,12 @@ import ".././styles/index.css";
 import ".././styles/App.css";
 
 const App: React.FC = () => {
+  const [hoveredSection, setHoveredSection] = useState("");
+
+  const handleHover = (section: string) => {
+    setHoveredSection(section);
+  };
+
   const myRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   const registerRef = useCallback((id: string) => {
@@ -22,31 +28,49 @@ const App: React.FC = () => {
   }, []);
 
   const handleMenuClick = (id: string) => {
-    console.log(id);
     myRefs.current[id]?.scrollIntoView({ behavior: "smooth" });
   };
 
   const linkStyle: string = "text-slate-100 underline hover:text-teal-500";
 
   return (
-    <div className="min-h-screen bg-gradient-to-l from-[#00032c] to-[#282a3e] lg:flex">
+    <div className="min-h-screen bg-gradient-to-l from-[#00032c] to-[#3e4160] lg:flex">
       <div className="px-6 py-12 font-sans md:px-12 md:py-20 lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:overflow-auto lg:px-24 lg:py-0 xl:ml-36">
         <Masthead />
         <div className="hidden lg:block">
-          <LinkList handleMenuClick={handleMenuClick} />
+          <LinkList
+            handleMenuClick={handleMenuClick}
+            hoveredSection={hoveredSection}
+          />
           <Socials />
         </div>
       </div>
+
       <div className="mx-auto mb-24 max-w-screen-xl space-y-8 px-6 py-12 font-sans md:px-12 md:py-20 lg:w-1/2 lg:px-24 lg:py-0 xl:mr-36">
-        <div ref={registerRef("about")}>
+        <div
+          ref={registerRef("about")}
+          onMouseEnter={() => handleHover("about")}
+          onMouseLeave={() => setHoveredSection("")}
+        >
           <SplashText />
         </div>
-        <div ref={registerRef("experience")}>
+
+        <div
+          ref={registerRef("experience")}
+          onMouseEnter={() => handleHover("experience")}
+          onMouseLeave={() => setHoveredSection("")}
+        >
           <Experience />
         </div>
-        <div ref={registerRef("projects")}>
+
+        <div
+          ref={registerRef("projects")}
+          onMouseEnter={() => handleHover("projects")}
+          onMouseLeave={() => setHoveredSection("")}
+        >
           <Projects />
         </div>
+
         <div className="block sm:hidden">
           <Socials />
         </div>

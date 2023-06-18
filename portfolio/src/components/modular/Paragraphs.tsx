@@ -18,7 +18,7 @@ const DescParagraph: React.FC<BaseParagraphProps> = ({ children }) => {
   return (
     <BaseParagraph
       children={children}
-      className="text-small font-regular tracking-wide"
+      className="text-small font-regular tracking-wide text-slate-50/75"
     />
   );
 };

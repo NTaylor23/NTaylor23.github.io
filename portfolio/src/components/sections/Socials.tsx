@@ -5,15 +5,14 @@ interface SvgIconProps {
   color?: string;
 }
 
-const SvgIcon: React.FC<SvgIconProps> = ({ path, href, aria, color = "#64748B" }) => (
+const SvgIcon: React.FC<SvgIconProps> = ({ path, href, aria, color = "#E2E8F0" }) => (
     <a href={href}>
       <svg
         viewBox={"0 0 24 24"}
         aria-label={aria}
-        className="ml-8 md:ml-0 h-6 w-6 hover:animate-pulse hover:text-slate-50"
+        className="hover:text-slate-50 ml-8 md:ml-0 h-6 w-6 "
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ color }}
       >
         <path d={path} fill={color} />
       </svg>

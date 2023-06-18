@@ -1,26 +1,51 @@
 import "../../styles/index.css";
 
-const liStyle: string = "cursor-pointer hover:text-slate-50 mt-4 hover:animate-pulse";
-
 interface LinkListProps {
   handleMenuClick: Function;
+  hoveredSection: string;
 }
 
-export const LinkList: React.FC<LinkListProps> = ({ handleMenuClick }) => {
+export const LinkList: React.FC<LinkListProps> = ({
+  handleMenuClick,
+  hoveredSection,
+}) => {
+
+  const liStyle: string =
+    "transition ease-in-out delay-50 cursor-pointer hover:text-slate-50 mt-4";
+
+  const highlightStyle: string = "delay-50 text-slate-50 " + liStyle;
+  
   return (
-    <div className="mt-12 text-slate-500">
-      <ul className="text-lg list-none tracking-[0.25rem] mt-2 ">
-        <li className={liStyle} onClick={() => handleMenuClick('about')}>
-            λ - ABOUT
+    <div className="mt-12 text-slate-400">
+      <ul className="mt-2 list-none text-lg tracking-[0.25rem] ">
+        <li
+          className={
+            hoveredSection === "about" ? highlightStyle : liStyle
+          }
+          onClick={() => handleMenuClick("about")}
+        >
+          λ - ABOUT
         </li>
-        <li className={liStyle} onClick={() => handleMenuClick('experience')} >
-            Δ - EXPERIENCE
+        <li
+          className={
+            hoveredSection === "experience" ? highlightStyle : liStyle
+          }
+          onClick={() => handleMenuClick("experience")}
+        >
+          Δ - EXPERIENCE
         </li>
-        <li className={liStyle} onClick={() => handleMenuClick('projects')} >
-            Ψ - PROJECTS
+        <li
+          className={
+            hoveredSection === "projects" ? highlightStyle : liStyle
+          }
+          onClick={() => handleMenuClick("projects")}
+        >
+          Ψ - PROJECTS
         </li>
         <li className={liStyle}>
-            <a href="/resume.pdf" rel="noopener noreferrer">Σ - RÉSUMÉ</a>
+          <a href="/resume.pdf" rel="noopener noreferrer">
+            Σ - RÉSUMÉ
+          </a>
         </li>
       </ul>
     </div>
