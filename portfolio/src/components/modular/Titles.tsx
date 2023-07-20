@@ -1,4 +1,5 @@
 import { JobLink } from "./LinkStyles";
+import "../../styles/fonts.css"
 
 interface BaseHeaderProps {
   text: string;
@@ -17,7 +18,7 @@ const BaseHeader: React.FC<
   }
 > = ({ text, className, Element }) => {
   return (
-    <div className="ms-8 md:ms-0">
+    <div className="ms-8 md:ms-0" >
       <Element className={`text-left ${className}`}>{text}</Element>
     </div>
   );
@@ -60,10 +61,10 @@ const JobTitle: React.FC<HeaderLinkProps> = ({
   children,
 }) => {
   return (
-    <div className="flex flex-shrink items-center space-x-2 text-sm">
+    <div className="flex flex-shrink items-center space-x-2 text-sm ">
       <BaseHeader
         text={title}
-        className="font-semibold text-slate-100"
+        className="font-semibold text-slate-100 tracking-wide"
         Element="h4"
       />
       <p>·</p>

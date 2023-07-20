@@ -1,13 +1,16 @@
 import { DescParagraph } from "../modular/Paragraphs";
 import { JobLink } from "../modular/LinkStyles";
 
+import "../../styles/fonts.css"
+
+
 export const Biography = () => {
   return (
     <DescParagraph>
       Back in 2020, I decided to try creating custom scripts to design my own
       sound engineering tools.
       <br />
-      <br />A few years of university later, I've shipped quality software for a
+      <br />A few years later, I've shipped quality software for a
       Y Combinator <JobLink text={"start up"} url={"https://www.cuboh.com/"} />,
       the{" "}
       <JobLink

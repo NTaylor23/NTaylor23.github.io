@@ -1,3 +1,5 @@
+import "../../styles/fonts.css"
+
 interface TechIconsProps {
   text: string;
 }

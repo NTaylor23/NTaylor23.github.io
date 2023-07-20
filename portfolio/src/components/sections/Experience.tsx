@@ -4,6 +4,8 @@ import { DividerHeader } from "../modular/Titles";
 import { TimeSpan } from "../modular/TimeSpan";
 
 import "../../styles/App.css";
+import "../../styles/fonts.css"
+
 
 export const Experience: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
@@ -15,7 +17,7 @@ export const Experience: React.FC = () => {
       orgName: "Quester Tangent",
       url: "https://www.questertangent.com/",
       description:
-        "Create, test, and optimize safety-critical software for a proprietary real-time operating system utilized globally in the rail transit industry.",
+        "Created, tested, and optimized safety-critical software for a proprietary real-time operating system utilized globally in the rail transit industry. Designed, developed, and implemented a lexical analysis tool-chain in Python that automated software testing processes, resulting in an 80% reduction in project time.",
       techStack: ["C", "Python", "RTOS", "Compiler Design"],
     },
     {
@@ -39,7 +41,7 @@ export const Experience: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8" >
       <DividerHeader text={"Experience"} />
       {cards.map((card) => (
         <TimeSpan

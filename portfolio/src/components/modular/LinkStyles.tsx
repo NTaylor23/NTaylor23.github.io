@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../../styles/fonts.css"
+
 interface LinkProps {
   text: string;
   url: string;
@@ -11,7 +13,7 @@ const BaseLink: React.FC<
   }
 > = ({ text, url }) => {
   return (
-      <a href={url} className={`text-white underline hover:text-teal-500`}>
+      <a href={url} className={"text-white underline hover:text-teal-500 tracking-wider"}>
         {text}
       </a>
   );

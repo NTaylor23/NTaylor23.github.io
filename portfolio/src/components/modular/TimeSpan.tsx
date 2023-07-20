@@ -1,3 +1,5 @@
+import "../../styles/fonts.css";
+
 import { DateRange, JobTitle } from "./Titles";
 import { JobParagraph } from "./Paragraphs";
 import { TechIcon } from "./TechIcons";
@@ -28,13 +30,13 @@ export const TimeSpan: React.FC<TimeSpanProps> = ({
   handleMouseLeave,
 }) => {
   return (
-    <>
       <div
         className={`mb-4 rounded transition-opacity duration-200 ease-in-out ${
           isGreyed ? "opacity-50" : "opacity-100"
         }`}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
+        style={{ fontFamily: "Raleway", fontWeight: "normal" }}
       >
         <DateRange text={dateRange} />
         <JobTitle text={orgName} title={title} url={url} />
@@ -47,7 +49,6 @@ export const TimeSpan: React.FC<TimeSpanProps> = ({
           ))}
         </div>
       </div>
-    </>
   );
 };
 

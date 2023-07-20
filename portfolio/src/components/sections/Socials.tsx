@@ -1,3 +1,6 @@
+import "../../styles/fonts.css"
+
+
 interface SvgIconProps {
   path: string;
   href: string;

@@ -1,4 +1,6 @@
 import "../../styles/index.css";
+import "../../styles/fonts.css"
+
 
 interface LinkListProps {
   handleMenuClick: Function;
@@ -16,7 +18,7 @@ export const LinkList: React.FC<LinkListProps> = ({
   const highlightStyle: string = "delay-50 text-slate-50 " + liStyle;
   
   return (
-    <div className="mt-12 text-slate-400">
+    <div className="mt-12 text-slate-400" style={{ fontFamily: "Raleway", fontWeight: "normal" }}>
       <ul className="mt-2 list-none text-lg tracking-[0.25rem] ">
         <li
           className={
