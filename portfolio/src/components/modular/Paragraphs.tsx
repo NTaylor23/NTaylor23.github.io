@@ -10,7 +10,7 @@ const BaseParagraph: React.FC<
   }
 > = ({ children, className }) => {
   return (
-    <div style={{ fontFamily: "Raleway", fontWeight: "600" }}>
+    <div style={{ fontFamily: "Raleway" }}>
       <p
         className={`mx-8 py-4 text-left text-slate-300/75 md:mx-0 ${className}`}
       >

@@ -33,13 +33,16 @@ const App: React.FC = () => {
   };
 
   const linkStyle: string = "text-slate-100 underline hover:text-teal-500";
-  //<div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 sm:bg-gradient-to-t sm:from-green-400 sm:via-blue-500 sm:to-indigo-500 md:bg-gradient-to-l md:from-purple-400 md:via-pink-500 md:to-red-500">
 
   return (
     
     <div className="min-h-screen lg:flex md:bg-gradient-to-l md:from-[#00032c] md:to-[#2c2e45] sm:bg-gradient-to-b sm:from-[#00032c] sm:to-[#3e4160] xs:bg-gradient-to-b xs:from-[#00032c] xs:to-[#3e4160]">
       <div className="px-6 py-12 font-sans md:px-12 md:py-20 lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:overflow-auto lg:px-24 lg:py-0 xl:ml-36">
+        <div className="visible lg:invisible">
+        <Socials />
+        </div>
         <Masthead />
+        
         <div className="hidden lg:block">
           <LinkList
             handleMenuClick={handleMenuClick}
