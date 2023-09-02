@@ -4,6 +4,7 @@ import { FooterParagraph } from "./modular/Paragraphs";
 import { SplashText } from "./sections/SplashText";
 import { Experience } from "./sections/Experience";
 import { Masthead } from "./sections/Masthead";
+import { Contact } from "./sections/Contact"
 
 import LinkList from "./sections/LinkList";
 import Socials from "./sections/Socials";
@@ -60,7 +61,6 @@ const App: React.FC = () => {
         >
           <SplashText />
         </div>
-
         <div
           ref={registerRef("experience")}
           onMouseEnter={() => handleHover("experience")}

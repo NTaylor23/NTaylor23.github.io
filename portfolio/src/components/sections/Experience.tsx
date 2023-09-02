@@ -13,7 +13,7 @@ export const Experience: React.FC = () => {
   const cards = [
     {
       dateRange: "May 2023 - Present",
-      title: "Software Developer Intern",
+      title: "Software Developer",
       orgName: "Quester Tangent",
       url: "https://www.questertangent.com/",
       description:
