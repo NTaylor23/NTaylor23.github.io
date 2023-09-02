@@ -62,7 +62,6 @@ export const Contact: React.FC<ContactProps> = ({
             console.log(error.text);
           }
         );
-      console.log("Form data submitted:", formData);
     } else {
       console.log("No data in form to submit.");
     }
@@ -134,20 +133,13 @@ export const Contact: React.FC<ContactProps> = ({
       </div>
       <div className="flex items-center justify-between">
         {!submitted ? (
-          <>
           <button
             className="focus:shadow-outline rounded bg-[#2DD4BF1A] px-4 py-2 font-bold text-teal-200 hover:bg-[#36f4db1a] focus:outline-none"
             type="submit"
           >
             Submit
           </button>
-          <button
-          className="focus:shadow-outline rounded bg-[#2DD4BF1A] px-4 py-2 font-bold text-teal-200 hover:bg-[#36f4db1a] focus:outline-none"
-          type="submit"
-        >
-          Submit
-        </button>
-        </>
+          
         ) : (
           <p className="mb-2 block tracking-widest text-teal-200">
             ✓ Thank you for getting in touch!
