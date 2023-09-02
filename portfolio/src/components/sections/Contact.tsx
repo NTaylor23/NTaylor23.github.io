@@ -1,6 +1,7 @@
 import "../../styles/fonts.css";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 interface ContactProps {
   contactIsShowing: boolean;
@@ -12,15 +13,29 @@ export const Contact: React.FC<ContactProps> = ({
   setcontactIsShowing,
 }) => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     message: "",
   });
+
+  const [submitted, setSubmitted] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
+
+  const handleClose = () => {
+    setcontactIsShowing(false);
+    setSubmitted(false);
+    setFormData({
+      user_name: "",
+      user_email: "",
+      message: "",
+    });
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+    setSubmitted(false);
     setFormData({
       ...formData,
       [name]: value,
@@ -29,35 +44,56 @@ export const Contact: React.FC<ContactProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Add form submission logic here
-    console.log("Form data submitted:", formData);
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_0i9pox9",
+          "template_1omlh8f",
+          form.current,
+          "u1cCcTYsfhObVqZ3Z"
+        )
+        .then(
+          (result) => {
+            console.log(result.text, form.current);
+            setSubmitted(true);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      console.log("Form data submitted:", formData);
+    } else {
+      console.log("No data in form to submit.");
+    }
   };
 
-  const bgStyle = "focus:shadow-outline w-full appearance-none rounded bg-slate-50 bg-opacity-10 px-3 py-2 leading-tight text-slate-50 shadow focus:outline-none"
+  const bgStyle =
+    "focus:shadow-outline w-full appearance-none rounded bg-slate-50 bg-opacity-10 px-3 py-2 leading-tight text-slate-50 shadow focus:outline-none";
 
   return contactIsShowing ? (
-    <form onSubmit={handleSubmit}>
+    <form ref={form} onSubmit={handleSubmit}>
       <div className="mb-4">
         <div className="grid grid-cols-2">
           <label
             className="mb-2 block tracking-widest text-slate-100"
-            htmlFor="name"
+            htmlFor="user_name"
           >
             Name
           </label>
           <p
             className="mb-2 block cursor-pointer text-right tracking-widest text-slate-100 hover:text-slate-400"
-            onClick={() => setcontactIsShowing(false)}
+            onClick={() => handleClose()}
           >
             [Close]
           </p>
         </div>
         <input
           type="text"
-          id="name"
-          name="name"
+          id="user_name"
+          name="user_name"
           className={bgStyle}
-          value={formData.name}
+          value={formData.user_name}
           onChange={handleChange}
           required
         />
@@ -65,16 +101,16 @@ export const Contact: React.FC<ContactProps> = ({
       <div className="mb-4">
         <label
           className="mb-2 block tracking-widest text-slate-50"
-          htmlFor="email"
+          htmlFor="user_email"
         >
           Email
         </label>
         <input
           type="email"
-          id="email"
-          name="email"
+          id="user_email"
+          name="user_email"
           className={bgStyle}
-          value={formData.email}
+          value={formData.user_email}
           onChange={handleChange}
           required
         />
@@ -97,12 +133,18 @@ export const Contact: React.FC<ContactProps> = ({
         ></textarea>
       </div>
       <div className="flex items-center justify-between">
-        <button
-          className="focus:shadow-outline rounded bg-[#2DD4BF1A] px-4 py-2 font-bold text-teal-200 hover:bg-[#36f4db1a] focus:outline-none"
-          type="submit"
-        >
-          Submit
-        </button>
+        {!submitted ? (
+          <button
+            className="focus:shadow-outline rounded bg-[#2DD4BF1A] px-4 py-2 font-bold text-teal-200 hover:bg-[#36f4db1a] focus:outline-none"
+            type="submit"
+          >
+            Submit
+          </button>
+        ) : (
+          <p className="mb-2 block tracking-widest text-teal-200">
+            ✓ Thank you for getting in touch!
+          </p>
+        )}
       </div>
     </form>
   ) : (
