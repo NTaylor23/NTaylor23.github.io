@@ -17,7 +17,7 @@ export const Experience: React.FC = () => {
       orgName: "Quester Tangent",
       url: "https://www.questertangent.com/",
       description:
-        "Created, tested, and optimized safety-critical software for a proprietary real-time operating system utilized globally in the rail transit industry. Designed, developed, and implemented a lexical analysis tool-chain in Python that automated software testing processes, resulting in an 80% reduction in project time.",
+        "Created, tested, and optimized safety-critical software for a proprietary real-time operating system utilized globally in the rail transit industry. Designed, developed, and implemented a lexical analysis tool-chain in Python that automated software testing processes, resulting in a time savings of 150 working days for the hardware engineering department.",
       techStack: ["C", "Python", "RTOS", "Compiler Design"],
     },
     {

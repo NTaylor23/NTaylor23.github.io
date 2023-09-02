@@ -10,7 +10,6 @@ import website from "../../static/images/website.png";
 
 import "../../styles/fonts.css"
 
-
 export const Projects: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
@@ -23,7 +22,7 @@ export const Projects: React.FC = () => {
       description:
         "Led a team of fellow students in developing a versatile full-stack web application for a modern, fast-paced startup.",
       techStack: ["JavaScript", "React", "Django", "Redis"],
-      url: 'https://www.camosun.ca',
+      url: 'https://www.cuboh.com/',
       
     },
     {
