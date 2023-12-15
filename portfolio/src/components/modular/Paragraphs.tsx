@@ -12,7 +12,7 @@ const BaseParagraph: React.FC<
   return (
     <div style={{ fontFamily: "Raleway" }}>
       <p
-        className={`mx-8 py-4 text-left text-slate-300/75 md:mx-0 ${className}`}
+        className={`mx-8 py-4 text-left text-slate-200/75 md:mx-0 ${className}`}
       >
         {children}
       </p>

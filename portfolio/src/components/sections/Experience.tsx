@@ -12,7 +12,16 @@ export const Experience: React.FC = () => {
 
   const cards = [
     {
-      dateRange: "May 2023 - Present",
+      dateRange: "Nov 2023 - Present",
+      title: "Full Stack Software Developer",
+      orgName: "Rooof",
+      url: "https://www.rooof.com/",
+      description:
+        "I'm helping to build a new vendor management software product for the North American multifamily housing industry. My key responsibilties are server-side development using Django and PostgreSQL, front-end development with Vue 3, and designing infrastructure on AWS. Additionally, I design and maintain CI/CD workflows, play a significant role in technical design decisions, and support quality assurance.",
+      techStack: ["Django", "Vue", "PostgreSQL", "AWS", "Google Cloud"],
+    },
+    {
+      dateRange: "May 2023 - Nov 2023",
       title: "Software Developer",
       orgName: "Quester Tangent",
       url: "https://www.questertangent.com/",
