@@ -5,12 +5,12 @@ import emailjs from "@emailjs/browser";
 
 interface ContactProps {
   contactIsShowing: boolean;
-  setcontactIsShowing: Function;
+  setContactIsShowing: Function;
 }
 
 export const Contact: React.FC<ContactProps> = ({
   contactIsShowing,
-  setcontactIsShowing,
+  setContactIsShowing,
 }) => {
   const [formData, setFormData] = useState({
     user_name: "",
@@ -22,7 +22,7 @@ export const Contact: React.FC<ContactProps> = ({
   const form = useRef<HTMLFormElement>(null);
 
   const handleClose = () => {
-    setcontactIsShowing(false);
+    setContactIsShowing(false);
     setSubmitted(false);
     setFormData({
       user_name: "",

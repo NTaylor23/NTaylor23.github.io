@@ -13,11 +13,8 @@ export const Masthead: React.FC = () => {
     >
       <TopHeader text={"Nicholas Taylor"} />
       <DescParagraph>
-        I'm a Victoria based full-stack developer, educator, student, and
-        artist.
-        <br />
-        <br />I like solving complex problems at the intersection of art and
-        technology.
+        I'm a Victoria, British Columbia based full-stack developer with three years of
+        professional software development experience.
         <br />
         <br />
         <span className="visible lg:invisible">

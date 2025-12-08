@@ -1,28 +1,20 @@
 import { DescParagraph } from "../modular/Paragraphs";
 import { JobLink } from "../modular/LinkStyles";
 
-import "../../styles/fonts.css"
+import "../../styles/fonts.css";
 
-
-export const Biography = () => {
-  return (
-    <DescParagraph>
-      Back in 2020, I decided to try creating custom scripts to design my own
-      sound engineering tools.
-      <br />
-      <br />A few years later, I've shipped quality software for a
-      Y Combinator <JobLink text={"start up"} url={"https://www.cuboh.com/"} />,
-      the{" "}
-      <JobLink
-        text={"global rail transit industry"}
-        url={"https://www.questertangent.com/"}
-      />
-      , and a <JobLink text={"game engine"} url={"https://unity.com/"} /> with
-      two billion monthly active users.
-      <br />
-      <br />
-      In my free time, I tutor computer science students, write music, work on
-      art and tech projects with friends, and learn about everything I can.
-    </DescParagraph>
-  );
-};
+export const Biography = () => (
+  <DescParagraph>
+    Currently, I'm writing software for the multifamily industry at{" "}
+    <JobLink text="Pivott" url="https://www.pivott.io/" /> in Victoria.
+    <br />
+    <br />
+    Previously, I've worked for a recently-acquired{" "}
+    <JobLink text="start up" url="https://www.cuboh.com/" />, the{" "}
+    <JobLink
+      text="global rail transit industry"
+      url="https://www.questertangent.com/"
+    />
+    , and <JobLink text="Unity Technologies" url="https://unity.com/" />.
+  </DescParagraph>
+);

@@ -20,7 +20,6 @@ export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   description,
   techStack,
   alt,
-  isHovered,
   isGreyed,
   handleHover,
   handleMouseLeave,

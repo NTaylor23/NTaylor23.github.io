@@ -4,53 +4,43 @@ import { DividerHeader } from "../modular/Titles";
 import { TimeSpan } from "../modular/TimeSpan";
 
 import "../../styles/App.css";
-import "../../styles/fonts.css"
-
+import "../../styles/fonts.css";
 
 export const Experience: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const cards = [
     {
-      dateRange: "Nov 2023 - Present",
+      dateRange: "November 2023 - Present",
       title: "Full Stack Software Developer",
-      orgName: "Rooof",
-      url: "https://www.rooof.com/",
+      orgName: "Pivott",
+      url: "https://www.pivott.io/",
       description:
-        "I'm helping to build a new vendor management software product for the North American multifamily housing industry. My key responsibilties are server-side development using Django and PostgreSQL, front-end development with Vue 3, and designing infrastructure on AWS. Additionally, I design and maintain CI/CD workflows, play a significant role in technical design decisions, and support quality assurance.",
-      techStack: ["Django", "Vue", "PostgreSQL", "AWS", "Google Cloud"],
+        "I help build a vendor management software platform for the North American multifamily housing industry. I develop backend services with Django and PostgreSQL, create frontend features in Vue 3, and design AWS infrastructure. I also maintain CI/CD workflows, contribute to technical architecture decisions, and ensure software quality across the stack.",
+      techStack: ["Django", "Vue", "PostgreSQL", "AWS", "OpenAI"],
     },
     {
-      dateRange: "May 2023 - Nov 2023",
+      dateRange: "May 2023 - November 2023",
       title: "Software Developer",
       orgName: "Quester Tangent",
       url: "https://www.questertangent.com/",
       description:
-        "Created, tested, and optimized safety-critical software for a proprietary real-time operating system utilized globally in the rail transit industry. Designed, developed, and implemented a lexical analysis tool-chain in Python that automated software testing processes, resulting in a time savings of 150 working days for the hardware engineering department.",
+        "Maintained software used worldwide in rail transit, and built a lexical analysis toolchain in Python that automated testing and saved the hardware engineering team roughly 150 workdays.",
       techStack: ["C", "Python", "RTOS", "Compiler Design"],
     },
     {
       dateRange: "May 2022 - August 2022",
-      title: "Software Developer Intern",
+      title: "Software Developer Co-op",
       orgName: "Unity",
       url: "https://unity.com/",
       description:
-        "Contributed to the success of a VR education platform through hands-on involvement in development, testing, and client relationship management, resulting in a successfully shipped product. Designed and implemented an automated video compression and uploading process, streamlining the multimedia pipeline between the company and clients.",
+        "Worked on a VR education platform, contributing to development, testing, and client support to help deliver the finished product. Built an automated video upload pipeline, streamlining multimedia workflows between the company and clients.",
       techStack: ["C#", "Unity", "AR/VR", "WebGL"],
-    },
-    {
-      dateRange: "April 2021 - April 2022",
-      title: "Technologist",
-      orgName: "Cascadia",
-      url: "https://www.cascadiaseaweed.com/",
-      description:
-        "Led the design and testing of software for an underwater camera system, contributing to the successful completion of a federal environmental sustainability project.",
-      techStack: ["Python", "Raspberry Pi", "GIS"],
     },
   ];
 
   return (
-    <div className="space-y-8" >
+    <div className="space-y-8">
       <DividerHeader text={"Experience"} />
       {cards.map((card) => (
         <TimeSpan

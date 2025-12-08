@@ -19,7 +19,9 @@ export const LinkList: React.FC<LinkListProps> = ({
 
   const highlightStyle: string = "delay-50 text-slate-50 " + liStyle;
 
-  return contactIsShowing ? <></> : (
+  return contactIsShowing ? (
+    <></>
+  ) : (
     <div
       className="mt-4 text-slate-400"
       style={{ fontFamily: "Raleway", fontWeight: "normal" }}
@@ -44,12 +46,12 @@ export const LinkList: React.FC<LinkListProps> = ({
           Ω - PROJECTS
         </li>
         <li className={liStyle}>
-          <a href="/resume.pdf" rel="noopener noreferrer">
+          <a href="/resume.pdf" rel="noopener noreferrer" target="_blank">
             Σ - RÉSUMÉ
           </a>
         </li>
         <li className={liStyle} onClick={() => setContactIsShowing(true)}>
-            ∩ - CONTACT
+          ∩ - CONTACT
         </li>
       </ul>
     </div>

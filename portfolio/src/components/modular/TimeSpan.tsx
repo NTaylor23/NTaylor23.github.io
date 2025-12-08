@@ -24,7 +24,6 @@ export const TimeSpan: React.FC<TimeSpanProps> = ({
   url,
   description,
   techStack,
-  isHovered,
   isGreyed,
   handleHover,
   handleMouseLeave,
